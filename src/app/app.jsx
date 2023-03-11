@@ -1,4 +1,4 @@
-import { BrowserRouter } from "react-router-dom"
+import { HashRouter } from "react-router-dom"
 import React from "react"
 
 import { Routing } from "@pages"
@@ -7,9 +7,9 @@ export const App = () => {
   return (
     <React.StrictMode>
       <React.Suspense>
-        <BrowserRouter>
+        <HashRouter>
           <Routing />
-        </BrowserRouter>
+        </HashRouter>
       </React.Suspense>
     </React.StrictMode>
   )
