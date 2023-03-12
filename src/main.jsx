@@ -1,9 +1,17 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import { App } from '@app'
+import { HashRouter } from "react-router-dom"
 
-import './reset.css'
+import React from "react"
+import ReactDOM from "react-dom"
+import { App } from "@app"
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-    <App />
+import "./reset.css"
+
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <React.StrictMode>
+    <React.Suspense>
+      <HashRouter>
+        <App />
+      </HashRouter>
+    </React.Suspense>
+  </React.StrictMode>
 )
