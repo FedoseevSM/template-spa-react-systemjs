@@ -1,13 +1,21 @@
-import { Route, Routes } from "react-router-dom"
+import { Route, Switch} from "react-router-dom"
 
 import { HomePage, MainPage, Error404Page } from "@pages"
 
 export const Routing = () => {
   return (
-    <Routes>
-      <Route path="/" element={<HomePage />} />
-      <Route exact path="main" element={<MainPage />} />
-      <Route path="*" element={<Error404Page />} />
-    </Routes>
+    <div>
+      <Switch>
+      <Route exact path="/">
+        <HomePage />
+      </Route>
+      <Route exact path="/main">
+        <MainPage />
+      </Route>
+      <Route exact path="*">
+        <Error404Page />
+      </Route>
+      </Switch>
+    </div>
   )
 }
